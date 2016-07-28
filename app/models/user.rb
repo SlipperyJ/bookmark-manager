@@ -8,7 +8,7 @@ class User
   attr_accessor :password_confirmation
 
   property :id, Serial
-  property :email, String
+  property :email, String, format: :email_address, required: true
   property :password_digest, String, length: 60
 
   def password=(password)
